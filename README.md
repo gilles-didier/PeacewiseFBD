@@ -26,6 +26,7 @@ Directory "data" contains the dataset studied in "Testing extinction events and 
       contains the simulated tree
    - 'Simulated_dataset_fossils.csv'
        contains the  corresponding fossil ages
+   - folders 'Empirical_dataset_model_spec' and 'Simulated_Dataset_model_spec' contain the model specifications considered in the manuscript
 
 
 A complete description of the options of the programs is given below.
@@ -49,7 +50,7 @@ COMPILING
 --------------------------
 DESCRIPTION
 
-	'getPost' computes the divergence time distibution associated to a given clade from a set of possible trees, the fossil ages, and the diversification rates
+	'getPost' provides coda files for MCMC convergence diagnostics and posterior distribution of the model specification parameters
 
 
 --------------------------
@@ -87,6 +88,131 @@ DESCRIPTION
 		set the number of samples required
 	-r <number>
 		set the random seed
+	-h
+		display help
+
+EXAMPLE
+
+
+------------
+ getAIC 
+------------
+
+--------------------------
+REQUIREMENT
+
+	'getAIC' requires the gsl libraries.
+
+--------------------------
+COMPILING
+
+	Just type
+	> make getAIC
+	in a console opened on the directory containing the source files to build the binary.
+
+--------------------------
+DESCRIPTION
+
+	'getAIC' returns the maximum likelihood and the AIC of a dataset under a model specification
+
+
+--------------------------
+--------------------------
+MANUAL
+--------------------------
+--------------------------
+
+
+--------------------------
+
+NAME
+	getAIC - returns the maximum likelihood and the AIC of a dataset under a model specification
+	
+SYNOPSIS
+	getAIC [OPTIONS] <tree(s)> <fossil ages> <model specification> [output File]
+
+DESCRIPTION
+	Return the maximum likelihood and the AIC of the dataset made of <tree(s)> and <fossil ages> under the model specification <model specification>.
+
+	Options are
+	-w <speciation rate width> <extinction rate width> <fossilization rate width> <sampling probability width>
+		set the widths of the sliding windows used for sampling the speciation, extinction and fossilization rates and of the sampling probability during the MCMC
+	-i <speciation rate upper bound> <extinction rate  upper bound> <fossilization rate upper bound> <sampling probability upper bound>
+		set the upper bounds of the interval in which the speciation, extinction and fossilization rates and the sampling probability are uniformly drawn at the beginning of the MCMC (lower bounds are all 0)
+	-f <proportion>
+		set the proportion of moves in the parameters in the MCMC proposal (other moves are drawn uniformly amont the fossil ages)
+	-a <speciation proportion> <extinction proportion> <fossilization proportion>
+		set the relation proportion of moves in the speciation, the extinction and the fossilzation rates (thus in the sampling probability)
+	-s <number>
+		set the number of samples required to estimate the maximum likelihood
+	-r <number>
+		set the random seed
+	-h
+		display help
+
+EXAMPLE
+
+
+
+------------
+ testAIC 
+------------
+
+--------------------------
+REQUIREMENT
+
+	'testAIC' requires the gsl libraries.
+
+--------------------------
+COMPILING
+
+	Just type
+	> make testAIC
+	in a console opened on the directory containing the source files to build the binary.
+
+--------------------------
+DESCRIPTION
+
+	'testAIC' simulates trees under a given model and writes files containing the Akaike weights of several model specifications over these simulated trees
+
+
+--------------------------
+--------------------------
+MANUAL
+--------------------------
+--------------------------
+
+
+--------------------------
+
+NAME
+	testAIC - simulates trees under a given model and writes files containing the Akaike weights of several model specifications over these simulated trees
+	
+SYNOPSIS
+	testAIC [OPTIONS] <model> <model specification 1>  <model specification 2> ... <model specification n>
+
+DESCRIPTION
+	 Simulate trees under the model <model> and write the files containing the Akaike weights of model specifications <model specification 1>  <model specification 2> ... <model specification n> over these simulated trees
+
+	Options are
+	-w <speciation rate width> <extinction rate width> <fossilization rate width> <sampling probability width>
+		set the widths of the sliding windows used for sampling the speciation, extinction and fossilization rates and of the sampling probability during the MCMC
+	-i <speciation rate upper bound> <extinction rate  upper bound> <fossilization rate upper bound> <sampling probability upper bound>
+		set the upper bounds of the interval in which the speciation, extinction and fossilization rates and the sampling probability are uniformly drawn at the beginning of the MCMC (lower bounds are all 0)
+	-f <proportion>
+		set the proportion of moves in the parameters in the MCMC proposal (other moves are drawn uniformly amont the fossil ages)
+	-a <speciation proportion> <extinction proportion> <fossilization proportion>
+		set the relation proportion of moves in the speciation, the extinction and the fossilzation rates (thus in the sampling probability)
+	-s <number>
+		set the number of samples required to estimate the maximum likelihood
+	-r <number>
+		set the random seed
+	-m <number>
+		set the minimum size of the simulated trees to <number>
+	-M <number>
+		set the maximum size of the simulated trees to <number>
+	-u <number>
+		set the number of trees to simulate to <number>
 	-h
 		display help
 
