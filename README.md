@@ -22,6 +22,7 @@ Directory "src" contains the C sources of the standalone software
 
 Directory "data" contains the dataset studied in "Testing extinction events and temporal shifts in diversification and fossilization rates":
 
+
     - 'Empirical_dataset_tree.newick'
       contains 100 equiparsimonious trees of Cotylosauria
       
@@ -31,10 +32,10 @@ Directory "data" contains the dataset studied in "Testing extinction events and 
 	- 'Simulated_dataset_tree.newick'
       contains the simulated tree
       
-   - 'Simulated_dataset_fossils.csv'
+	- 'Simulated_dataset_fossils.csv'
        contains the  corresponding fossil ages
        
-   - folders 'Empirical_dataset_model_spec' and 'Simulated_Dataset_model_spec' contain the model specifications considered in the manuscript
+	- folders 'Empirical_dataset_model_spec' and 'Simulated_Dataset_model_spec' contain the model specifications considered in the manuscript
 
 
 A complete description of the options of the programs is given below.
