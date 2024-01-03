@@ -105,7 +105,7 @@ DESCRIPTION
 
 EXAMPLE
 
-./getPost -s 5000 -b 50000 -g 50 -f 0.2 -a 0.25 0.25 0.25 -w 0.5 0.5 0.5 0.5 -i 5. 5. 5. 1. ../data/Simulated_dataset_tree.newick ../data/Simulated_dataset_fossils.csv ../data/Simulated_Dataset_model_spec/Simul_model_spec_0.txt 
+./getPost -s 5000 -b 50000 -g 50 -f 0.2 -a 0.25 0.25 0.25 -w 0.05 0.05 0.05 0.25 -i 0.5 0.5 0.5 1.  ../data/Simulated_dataset_tree.newick ../data/Simulated_dataset_fossils.csv ../data/Simulated_Dataset_model_spec/Simul_model_spec_0.txt 
 
 ------------
  getAIC 
@@ -168,7 +168,7 @@ DESCRIPTION
 
 EXAMPLE
 
-./getAIC -s 10000 -f 0.2 -a 0.25 0.25 0.25 -w 0.5 0.5 0.5 0.5 -i 5. 5. 5. 1. ../data/Simulated_dataset_tree.newick ../data/Simulated_dataset_fossils.csv ../data/Simulated_Dataset_model_spec/Simul_model_spec_0.txt 
+./getAIC -s 10000 -f 0.2  -a 0.25 0.25 0.25 -w 0.05 0.05 0.05 0.25 -i 0.5 0.5 0.5 1.  ../data/Simulated_dataset_tree.newick ../data/Simulated_dataset_fossils.csv ../data/Simulated_Dataset_model_spec/Simul_model_spec_0.txt 
 
 ------------
  testAIC 
@@ -241,4 +241,4 @@ DESCRIPTION
 
 EXAMPLE
 
-./testAIC -l 5 -s 10000 -f 0.2 -a 0.25 0.25 0.25 -w 0.5 0.5 0.5 0.5 -i 5. 5. 5. 1. -u 1000 -m 100 -M 500 ~/Dropbox/FossilPiecewise/resultMS/scheme_Fig0_ML_model.txt ../data/Simulated_Dataset_model_spec/Simul_model.txt ../data/Simulated_Dataset_model_spec/Simul_model_spec_0.txt ../data/Simulated_Dataset_model_spec/Simul_model_spec_1.txt ../data/Simulated_Dataset_model_spec/Simul_model_spec_1E.txt
+./testAIC -l 5 -s 25000 -f 0.2 -a 0.25 0.25 0.25 -w 0.05 0.05 0.05 0.25 -i 0.5 0.5 0.5 1. -u 30 -m 100 -M 500 ../data/Simulated_Dataset_model_spec/Simul_model.txt ../data/Simulated_Dataset_model_spec/Simul_model_spec_0.txt ../data/Simulated_Dataset_model_spec/Simul_model_spec_1.txt ../data/Simulated_Dataset_model_spec/Simul_model_spec_1E.txt
