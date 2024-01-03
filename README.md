@@ -2,10 +2,13 @@
 Probability densities of fossil ages and tree topologies under the skyline FBD model
 
 Software includes
+
  - 'getPost'
 	computes the divergence time distibution associated to a given clade from a set of possible trees, the fossil stratigraphic intervals and provides coda files for MCMC convergence diagnostics
+	
  - 'getAIC'
 	computes the divergence time distribution associated to a given set of nodes of a single tree and the fossil stratigraphic intervals
+	
  - 'testAIC'
 	computes the extinction time distibutions associated to a given set of clades from a set of possible trees, the fossil stratigraphic intervals and provides coda files for MCMC convergence diagnostics
 
@@ -63,12 +66,15 @@ MANUAL
 --------------------------
 
 NAME
+
 	getPost - provides coda files for MCMC convergence diagnostics and posterior distribution of the model specification parameters
 	
 SYNOPSIS
+
 	getPost [OPTIONS] <tree(s)> <fossil ages> <model specification> [output File]
 
 DESCRIPTION
+
 	Provides coda files for MCMC convergence diagnostics and posterior distribution of the model specification parameters of  <model specification> from the tree(s) in file <tree(s)> (in Newick format) with the fossil ranges provided in <fossil ages> (in csv format). The two files <output File>.out and <output File>.ind are to be read by the R package coda.
 
 	Options are
@@ -127,12 +133,15 @@ MANUAL
 --------------------------
 
 NAME
+
 	getAIC - returns the maximum likelihood and the AIC of a dataset under a model specification
 	
 SYNOPSIS
+
 	getAIC [OPTIONS] <tree(s)> <fossil ages> <model specification> [output File]
 
 DESCRIPTION
+
 	Return the maximum likelihood and the AIC of the dataset made of <tree(s)> and <fossil ages> under the model specification <model specification>.
 
 	Options are
@@ -187,12 +196,15 @@ MANUAL
 --------------------------
 
 NAME
+
 	testAIC - simulates trees under a given model and writes files containing the Akaike weights of several model specifications over these simulated trees
 	
 SYNOPSIS
+
 	testAIC [OPTIONS] <model> <model specification 1>  <model specification 2> ... <model specification n>
 
 DESCRIPTION
+
 	 Simulate trees under the model <model> and write the files containing the Akaike weights of model specifications <model specification 1>  <model specification 2> ... <model specification n> over these simulated trees
 
 	Options are
