@@ -232,6 +232,8 @@ DESCRIPTION
 		set the minimum size of the simulated trees to <number>
 	-M <number>
 		set the maximum size of the simulated trees to <number>
+	-x <number>
+		set the minimum number of events in a slice to <number>
 	-u <number>
 		set the number of trees to simulate to <number>
 	-h
